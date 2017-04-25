@@ -9,9 +9,23 @@ class App extends Component {
       <div className="App">
         <div className="App-header">
           <img src={logoRecipeBook} className="App-logo" alt="logo" />
-          <h2>Recipe Book</h2>
+          <h2 id="title">Recipe Book</h2>
         </div>
         <div className="Div-button">Register your Recipe!</div>
+        <div className="Div-grid">
+        <div className="Div-card">Recipe</div>
+        <div className="Div-card">Recipe</div>
+        <div className="Div-card">Recipe</div>
+        <div className="Div-card">Recipe</div>
+        <div className="Div-card">Recipe</div>
+        <div className="Div-card">Recipe</div>
+        <div className="Div-card">Recipe</div>
+        <div className="Div-card">Recipe</div>
+        <div className="Div-card">Recipe</div>
+        <div className="Div-card">Recipe</div>
+        <div className="Div-card">Recipe</div>
+
+        </div>
       </div>
     );
   }

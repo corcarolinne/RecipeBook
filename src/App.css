@@ -7,17 +7,20 @@
 
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
-  height: 100px;
+  height: 90px;
 }
 
 .App-header {
   background-color: white;
   height: 150px;
   padding: 70px;
+}
+
+#title {
   color: black;
   font-family: 'Lobster', cursive;
-  font-size: 30px;
-
+  font-size: 40px;
+  text-shadow: 0 1px 0px rgba(0, 0, 0, 0.3);
 }
 
 .App-intro {
@@ -29,8 +32,37 @@
   to { transform: rotate(360deg); }
 }
 
+.Div-grid {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  background-color: white;
+  width: 90%;
+  height: 100%;
+  margin: 0px 30px 30px 30px;
+}
+
+.Div-card {
+  color: black;
+  font-family: 'Raleway', sans-serif;
+  width: 350px;
+  height: 250px;
+  background-color: #F8B5D2;
+  margin-bottom: 20px;
+  padding: 30px 10px 30px 10px;
+  cursor: pointer;
+  font-size:1.3em;
+  text-shadow: 0 -1px 0px rgba(0, 0, 0, 0.3);
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  webkit-box-shadow: inset 0px 1px 0px #F8B5D2, 0px 5px 0px 0px #D890B0, 0px 10px 5px #999;
+  -moz-box-shadow: inset 0px 1px 0px #F8B5D2, 0px 5px 0px 0px #D890B0, 0px 10px 5px #999;
+  box-shadow: inset 0px 1px 0px #F8B5D2, 0px 5px 0px 0px #D890B0, 0px 10px 5px #999;
+}
 
 .Div-button {
+  margin-bottom: 80px;
   width:200px;
   background: #3e9cbf; /*the colour of the button*/
   padding: 8px 14px 10px; /*apply some padding inside the button*/
