@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import logoRecipeBook from './logoRecipeBook.png'
 import './App.css';
+import Grid from './components/presentional/grid';
+
 
 
 class App extends Component {
@@ -12,20 +14,19 @@ class App extends Component {
           <h2 id="title">Recipe Book</h2>
         </div>
         <div className="Div-button">Register your Recipe!</div>
-        <div className="Div-grid">
-        <div className="Div-card">Recipe</div>
-        <div className="Div-card">Recipe</div>
-        <div className="Div-card">Recipe</div>
-        <div className="Div-card">Recipe</div>
-        <div className="Div-card">Recipe</div>
-        <div className="Div-card">Recipe</div>
-        <div className="Div-card">Recipe</div>
-        <div className="Div-card">Recipe</div>
-        <div className="Div-card">Recipe</div>
-        <div className="Div-card">Recipe</div>
-        <div className="Div-card">Recipe</div>
-
-        </div>
+        <Grid>
+          <div className="Div-card">Recipe</div>
+          <div className="Div-card">Recipe</div>
+          <div className="Div-card">Recipe</div>
+          <div className="Div-card">Recipe</div>
+          <div className="Div-card">Recipe</div>
+          <div className="Div-card">Recipe</div>
+          <div className="Div-card">Recipe</div>
+          <div className="Div-card">Recipe</div>
+          <div className="Div-card">Recipe</div>
+          <div className="Div-card">Recipe</div>
+          <div className="Div-card">Recipe</div>
+        </Grid>
       </div>
     );
   }
