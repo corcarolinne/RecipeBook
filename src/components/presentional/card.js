@@ -4,12 +4,15 @@ import React, { Component } from 'react';
 class Card extends Component {
   render() {
 
-    const { title, photo } = this.props;
+    const { title, photo, cardClick } = this.props;
 
     return (
-      <div className="Div-card">
-        {title}
-        <img src={photo} height="200" width="250"/>
+      <div className="Div-card" onClick={cardClick}>
+
+        <img className="Div-card_img-container" src={photo} height="200" width="200"/>
+          <i>{title}</i>
+
+
       </div>
     );
   }

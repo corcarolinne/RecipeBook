@@ -16,7 +16,11 @@ class App extends Component {
         </div>
         <div className="Div-button">Register your Recipe!</div>
         <Grid>
-          <Card title="Vegan Pizza" photo="http://www.besthealthmag.ca/wp-content/uploads/2016/01/vegan-meal-plan-pizza.jpg"/>
+          <Card
+            cardClick={ () => {alert("RecipeInfo")}}
+            title="Vegan Pizza"
+            photo="http://www.besthealthmag.ca/wp-content/uploads/2016/01/vegan-meal-plan-pizza.jpg"
+          />
           <Card title="Recipe" />
           <Card title="Recipe" />
           <Card title="Recipe" />
