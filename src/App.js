@@ -24,6 +24,21 @@ class App extends Component {
         <div className="Div-button">Register your Recipe!</div>
         <RecipeInfo
           isOpen={this.state.recipeInfoOpen}
+          title="Vegan Pizza"
+          photo="http://www.besthealthmag.ca/wp-content/uploads/2016/01/vegan-meal-plan-pizza.jpg"
+          list= "LIST"
+          instructions="Preheat oven to 425 degrees F and position a rack in the middle of the oven.
+Bring large skillet to medium heat. Once hot, add 1 Tbsp olive oil, onion and peppers. Season with salt, herbs and stir. Cook until soft and slightly charred – 10-15 minutes, adding the mushrooms in the last few minutes. Set aside.
+Prepare sauce by adding tomato sauce to a mixing bowl and adding seasonings and salt to taste. Adjust seasonings as needed. Set aside. Note: If using tomato paste, add water to thin until desired consistency is reached.
+Prepare vegan parmesan if you haven’t already by blitzing raw cashes, sea salt, nutritional yeast and garlic powder in a food processor until a fine meal is reached. Transfer to jar and refrigerate to keep fresh.
+Roll out dough onto a floured surface and transfer to a parchment-lined round baking sheet. You’re going to add the pizza WITH the parchment directly to the oven to properly crisp the crust, so any round object will do as it’s not actually going into the oven (I use a wood board).
+Top with desired amount of tomato sauce (you’ll have leftovers, which you can store in a jar for later use), a sprinkle of parmesan cheese and the sautéed veggies.
+Use the baking sheet to gently slide the pizza directly onto the oven rack WITH the parchment underneath. Otherwise it will fall through.
+Bake for 17-20 minutes or until crisp and golden brown.
+Serve with remaining parmesan cheese, dried oregano and red pepper flake. Leftovers keep well – no need to reheat! Cold pizza is yum."
+          exitButtonLabel="Exit"
+          editButtonLabel="Edit"
+          deleteButtonLabel="Delete"
         />
         <Grid>
           <Card

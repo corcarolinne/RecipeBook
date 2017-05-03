@@ -9,7 +9,7 @@ class Card extends Component {
     return (
       <div className="Div-card" onClick={cardClick}>
 
-        <img className="Div-card_img-container" src={photo} height="200" width="200"/>
+        <img className="Div-img-container" src={photo} height="200" width="200"/>
           <i>{title}</i>
 
 
