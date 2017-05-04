@@ -24,9 +24,24 @@ class App extends Component {
         <div className="Div-button">Register your Recipe!</div>
         <RecipeInfo
           isOpen={this.state.recipeInfoOpen}
+          closeModal={ () => {
+            this.state.recipeInfoOpen = false;
+            this.setState(this.state);
+           }}
           title="Vegan Pizza"
           photo="http://www.besthealthmag.ca/wp-content/uploads/2016/01/vegan-meal-plan-pizza.jpg"
-          list= "LIST"
+          list= "1/2 of one Trader Joe’s garlic-herb pizza crust
+1/2 cup each Red, Green and Orange bell pepper, loosely chopped
+1/3 cup red onion, chopped
+1 cup button mushrooms, chopped
+1/2 tsp each dried or fresh basil, oregano and garlic powder
+1/4 tsp sea salt
+1/2 of one Trader Joe’s garlic-herb pizza crust (or half of this homemade recipe or this gluten free recipe)
+1/2 cup each Red, Green and Orange bell pepper, loosely chopped
+1/3 cup red onion, chopped
+1 cup button mushrooms, chopped
+1/2 tsp each dried or fresh basil, oregano and garlic powder
+1/4 tsp sea salt"
           instructions="Preheat oven to 425 degrees F and position a rack in the middle of the oven.
 Bring large skillet to medium heat. Once hot, add 1 Tbsp olive oil, onion and peppers. Season with salt, herbs and stir. Cook until soft and slightly charred – 10-15 minutes, adding the mushrooms in the last few minutes. Set aside.
 Prepare sauce by adding tomato sauce to a mixing bowl and adding seasonings and salt to taste. Adjust seasonings as needed. Set aside. Note: If using tomato paste, add water to thin until desired consistency is reached.

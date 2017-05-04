@@ -12,7 +12,8 @@ class RecipeInfo extends Component {
       list,
       exitButtonLabel,
       editButtonLabel,
-      deleteButtonLabel} = this.props;
+      deleteButtonLabel,
+      closeModal} = this.props;
 
     return (
       <ReactModal
@@ -20,16 +21,22 @@ class RecipeInfo extends Component {
         isOpen={isOpen}
       >
         <div className="Div-recipe-info">
-          <img className="Div-img-container" src={photo} height="300" width="300"/>
-          <div className="Div-title"> <i>{title}</i> </div>
-          <p>{list}</p>
-          <div className="Div-instructions"> {instructions} </div>
+          <div className="Close-button" onClick={closeModal}>✖</div>
+          <div className="Div-photo-icons">
+            <img className="Div-photo" src={photo} height="300" width="300"/>
+          </div>
+          <div className="Div-title-text">
+            <div className="Div-title"> <i>{title}</i> </div>
+            <div className="Div-list-intructions">
+              <div className="Div-list">{list}</div>
+              <div className="Div-instructions"> {instructions} </div>
+            </div>
+            <div className="Div-buttons">
+              <button type="button">{editButtonLabel}</button>
+              <button type="button">{deleteButtonLabel}</button>
+            </div>
+          </div>
         </div>
-
-        <button type="button">{exitButtonLabel}</button>
-        <button type="button">{editButtonLabel}</button>
-        <button type="button">{deleteButtonLabel}</button>
-
       </ReactModal>
 
 
