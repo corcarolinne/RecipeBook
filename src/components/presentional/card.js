@@ -7,9 +7,9 @@ class Card extends Component {
     const { title, photo, cardClick } = this.props;
 
     return (
-      <div className="Div-card" onClick={cardClick}>
+      <div className="Card" onClick={cardClick}>
 
-        <img className="Div-img-container" src={photo} height="200" width="200"/>
+        <img className="Photo-card" src={photo} height="200" width="200"/>
           <i>{title}</i>
 
 

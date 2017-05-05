@@ -7,7 +7,7 @@ class Grid extends Component {
     const { children } = this.props;
 
     return (
-      <div className="Div-grid">
+      <div className="Grid">
         {children}
       </div>
     );

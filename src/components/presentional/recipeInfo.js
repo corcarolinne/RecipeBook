@@ -23,17 +23,17 @@ class RecipeInfo extends Component {
         <div className="Div-recipe-info">
           <div className="Close-button" onClick={closeModal}>✖</div>
           <div className="Div-photo-icons">
-            <img className="Div-photo" src={photo} height="300" width="300"/>
+            <img className="Photo" src={photo} height="300" width="300"/>
           </div>
           <div className="Div-title-text">
-            <div className="Div-title"> <i>{title}</i> </div>
+            <div className="Title"> <i>{title}</i> </div>
             <div className="Div-list-intructions">
-              <div className="Div-list">{list}</div>
-              <div className="Div-instructions"> {instructions} </div>
+              <div className="List">{list}</div>
+              <div className="Instructions"> {instructions} </div>
             </div>
-            <div className="Div-buttons">
-              <button type="button">{editButtonLabel}</button>
-              <button type="button">{deleteButtonLabel}</button>
+            <div className="Buttons">
+              <button className="button" type="button">{editButtonLabel}</button>
+              <button className="button" type="button">{deleteButtonLabel}</button>
             </div>
           </div>
         </div>

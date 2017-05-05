@@ -19,9 +19,9 @@ class App extends Component {
       <div className="App">
         <div className="App-header">
           <img src={logoRecipeBook} className="App-logo" alt="logo of a pink donut spinning" />
-          <h2 id="title">Recipe Book</h2>
+          <h2 className="App-title">Recipe Book</h2>
         </div>
-        <div className="Div-button">Register your Recipe!</div>
+        <div className="Register-button">Register your Recipe!</div>
         <RecipeInfo
           isOpen={this.state.recipeInfoOpen}
           closeModal={ () => {
