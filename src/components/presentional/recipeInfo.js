@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import ReactModal from 'react-modal';
+import List from './list';
+import IngredientRow from './ingredientRow';
 
 
 class RecipeInfo extends Component {
@@ -28,12 +30,32 @@ class RecipeInfo extends Component {
           <div className="Div-title-text">
             <div className="Title"> <i>{title}</i> </div>
             <div className="Div-list-intructions">
-              <div className="List">{list}</div>
-              <div className="Instructions"> {instructions} </div>
+              <List>
+                <IngredientRow ingredient="1/2 of one Trader Joe’s garlic-herb pizza crust"/>
+                <IngredientRow ingredient="1/2 of one Trader Joe’s garlic-herb pizza crust"/>
+                <IngredientRow ingredient="1/2 of one Trader Joe’s garlic-herb pizza crust"/>
+                <IngredientRow ingredient="1/2 of one Trader Joe’s garlic-herb pizza crust"/>
+                <IngredientRow ingredient="1/2 of one Trader Joe’s garlic-herb pizza crust"/>
+                <IngredientRow ingredient="1/2 of one Trader Joe’s garlic-herb pizza crust"/>
+                <IngredientRow ingredient="1/2 of one Trader Joe’s garlic-herb pizza crust"/>
+                <IngredientRow ingredient="1/2 of one Trader Joe’s garlic-herb pizza crust"/>
+                <IngredientRow ingredient="1/2 of one Trader Joe’s garlic-herb pizza crust"/>
+                <IngredientRow ingredient="1/2 of one Trader Joe’s garlic-herb pizza crust"/>
+                <IngredientRow ingredient="1/2 of one Trader Joe’s garlic-herb pizza crust"/>
+                <IngredientRow ingredient="1/2 of one Trader Joe’s garlic-herb pizza crust"/>
+                <IngredientRow ingredient="1/2 of one Trader Joe’s garlic-herb pizza crust"/>
+                <IngredientRow ingredient="1/2 of one Trader Joe’s garlic-herb pizza crust"/>
+                <IngredientRow ingredient="1/2 of one Trader Joe’s garlic-herb pizza crust"/>
+                
+              </List>
+              <div className="Instructions">
+                <div className= "Instructions-title">Instructions</div>
+                {instructions}
+              </div>
             </div>
             <div className="Buttons">
-              <button className="button" type="button">{editButtonLabel}</button>
-              <button className="button" type="button">{deleteButtonLabel}</button>
+              <button className="Button" type="button">{editButtonLabel}</button>
+              <button className="Button" type="button">{deleteButtonLabel}</button>
             </div>
           </div>
         </div>

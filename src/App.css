@@ -32,6 +32,24 @@
   text-shadow: 0 1px 0px rgba(0, 0, 0, 0.3);
 }
 
+.Register-button {
+  margin-bottom: 70px;
+  width:200px;
+  background: #3e9cbf; /*the colour of the button*/
+  padding: 8px 14px 10px; /*apply some padding inside the button*/
+  border:1px solid #3e9cbf; /*required or the default border for the browser will appear*/
+  cursor:pointer; /*forces the cursor to change to a hand when the button is hovered*/
+/*style the text*/
+  font-size:1.3em;
+  font-family: 'Lora', serif; /*Oswald is available from http://www.google.com/webfonts/specimen/Oswald*/
+
+  text-shadow: 0 -1px 0px rgba(0, 0, 0, 0.3); /*give the text a shadow - doesn't appear in Opera 12.02 or earlier*/
+  color: #fff;
+  box-shadow: inset 0px 1px 0px #3e9cbf, 0px 5px 0px 0px #205c73, 0px 10px 5px #999;
+/*give the corners a small curve*/
+  border-radius: 10px;
+}
+
 .Grid {
   display: flex;
   flex-flow: row wrap;
@@ -65,27 +83,9 @@
   border-radius: 50%;
 }
 
-.Register-button {
-  margin-bottom: 70px;
-  width:200px;
-  background: #3e9cbf; /*the colour of the button*/
-  padding: 8px 14px 10px; /*apply some padding inside the button*/
-  border:1px solid #3e9cbf; /*required or the default border for the browser will appear*/
-  cursor:pointer; /*forces the cursor to change to a hand when the button is hovered*/
-/*style the text*/
-  font-size:1.3em;
-  font-family: 'Lora', serif; /*Oswald is available from http://www.google.com/webfonts/specimen/Oswald*/
-
-  text-shadow: 0 -1px 0px rgba(0, 0, 0, 0.3); /*give the text a shadow - doesn't appear in Opera 12.02 or earlier*/
-  color: #fff;
-  box-shadow: inset 0px 1px 0px #3e9cbf, 0px 5px 0px 0px #205c73, 0px 10px 5px #999;
-/*give the corners a small curve*/
-  border-radius: 10px;
-}
-
 .Div-recipe-info {
   display: flex;
-  
+
 }
 
 .Div-recipe-info .Div-photo-icons {
@@ -119,18 +119,55 @@
   flex-direction: row;
 }
 
-.Div-recipe-info .Div-title-text .Div-list-intructions .List {
+.List {
   display: flex;
-  width: 300px;
-  height: 500px;
   margin-right: 20px;
+  flex-direction: column;
+
+}
+
+.List > div {
+  flex: 1;
+  background-color: #ebebeb;
+}
+
+.List .Ingredients-title {
+  display: flex;
+  color: gray;
+  font-style: italic;
+  font-size: 17px;
+  padding-top: 10px;
+}
+
+.Ingredient-row {
+  display: flex;
+
+}
+
+
+.Ingredient-row .Ingredient-icon {
+  margin-top: 5px;
+  margin-right: 5px;
+  margin-left: 5px;
+  width: 12px;
+  height: 10px;
+  border-radius: 40%;
+  background-color: gray;
 }
 
 .Div-recipe-info .Div-title-text .Div-list-intructions .Instructions {
+  flex-direction: column;
   display: flex;
   width: 500px;
   height: 500px;
   text-align: justify;
+}
+
+.Div-recipe-info .Div-title-text .Div-list-intructions .Instructions .Instructions-title {
+  display: flex;
+  color: gray;
+  font-style: italic;
+  font-size: 17px;
 }
 
 .Div-recipe-info .Div-title-text .Buttons {
@@ -138,7 +175,7 @@
   justify-content: flex-end;
 }
 
-.button {
+.Div-recipe-info .Div-title-text .Buttons .Button {
   margin-left: 10px;
 	display: inline-block;
 	outline: none;
@@ -156,10 +193,10 @@
 	box-shadow: 0 1px 2px rgba(0,0,0,.2);
 
 }
-.button:hover {
+.Div-recipe-info .Div-title-text .Buttons .Button .Button:hover {
 	text-decoration: none;
 }
-.button:active {
+.Div-recipe-info .Div-title-text .Buttons .Button .Button:active {
 	position: relative;
 	top: 1px;
 }
