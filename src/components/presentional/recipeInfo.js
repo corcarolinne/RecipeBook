@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import ReactModal from 'react-modal';
 import List from './list';
 import IngredientRow from './ingredientRow';
+import Grid from './grid';
+import IconAndInput from './iconAndInput';
 
 
 class RecipeInfo extends Component {
@@ -26,6 +28,13 @@ class RecipeInfo extends Component {
           <div className="Close-button" onClick={closeModal}>✖</div>
           <div className="Div-photo-icons">
             <img className="Photo" src={photo} height="300" width="300"/>
+            <Grid className="Grid-recipe-info">
+              <IconAndInput icon="timer" title="Prep:" input="40min"/>
+              <IconAndInput icon="attach_money" title="Price:" input="US$ 20"/>
+              <IconAndInput icon="room_service" title="Serves:" input="8 portions"/>
+              <IconAndInput icon="local_dining" input="Vegan"/>
+
+            </Grid>
           </div>
           <div className="Div-title-text">
             <div className="Title"> <i>{title}</i> </div>
@@ -43,10 +52,7 @@ class RecipeInfo extends Component {
                 <IngredientRow ingredient="1/2 of one Trader Joe’s garlic-herb pizza crust"/>
                 <IngredientRow ingredient="1/2 of one Trader Joe’s garlic-herb pizza crust"/>
                 <IngredientRow ingredient="1/2 of one Trader Joe’s garlic-herb pizza crust"/>
-                <IngredientRow ingredient="1/2 of one Trader Joe’s garlic-herb pizza crust"/>
-                <IngredientRow ingredient="1/2 of one Trader Joe’s garlic-herb pizza crust"/>
-                <IngredientRow ingredient="1/2 of one Trader Joe’s garlic-herb pizza crust"/>
-                
+
               </List>
               <div className="Instructions">
                 <div className= "Instructions-title">Instructions</div>

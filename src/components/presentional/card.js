@@ -10,7 +10,7 @@ class Card extends Component {
       <div className="Card" onClick={cardClick}>
 
         <img className="Photo-card" src={photo} height="200" width="200"/>
-          <i>{title}</i>
+        <i>{title}</i>
 
 
       </div>

@@ -4,12 +4,12 @@ import React, { Component } from 'react';
 class IngredientRow extends Component {
   render() {
     const {
-      ingredient
+      ingredient,
     } = this.props;
 
     return (
       <div className="Ingredient-row">
-        <div className="Ingredient-icon"/>
+        <i className="material-icons">chevron_right</i>
         {ingredient}
       </div>
     );
