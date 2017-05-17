@@ -4,13 +4,17 @@ import React, { Component } from 'react';
 class Card extends Component {
   render() {
 
-    const { title, photo, cardClick } = this.props;
+    const {
+      title,
+      photo,
+      instructions,
+      cardClick } = this.props;
 
     return (
       <div className="Card" onClick={cardClick}>
 
-        <img className="Photo-card" src={photo} height="200" width="200"/>
-        <i>{title}</i>
+        <img className="Photo-card" src={photo}/>
+        <div className="Title-card">{title}</div>
 
 
       </div>

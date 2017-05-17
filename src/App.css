@@ -62,25 +62,36 @@
 
 .Card {
   display: flex;
-  flex-flow: column wrap;
   justify-content: space-around;
   align-items: center;
   border-radius: 7px;
   box-shadow: 0 0 15px 0 #CCC;
   background-color: #fff;
-  color: black;
-  font-family: 'Lora', serif;
   width: 350px;
   height: 200px;
   margin-bottom: 20px;
   padding: 30px 10px 30px 10px;
   cursor: pointer;
-  font-size:1.3em;
-  text-shadow: 0 -1px 0px rgba(0, 0, 0, 0.3);
 }
 
 .Card .Photo-card {
-  border-radius: 50%;
+  width: 370px;
+  height: 250px;
+  position: absolute;
+}
+
+.Card .Title-card {
+  position: relative;
+  font-style: italic;
+  font-weight: bold;
+  font-size: 1.6em;
+  color: white;
+  font-family: 'Lora', serif;
+  text-shadow: 0 1px 0px rgba(0, 0, 0, 0.3);
+}
+
+.Photo-card:hover {
+  opacity: 0.6;
 }
 
 .Div-recipe-info {
@@ -182,7 +193,7 @@
   color: gray;
   font-style: italic;
   font-size: 17px;
-  padding-bottom: 25px; 
+  padding-bottom: 25px;
 
 }
 
