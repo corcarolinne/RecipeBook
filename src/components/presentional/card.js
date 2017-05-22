@@ -7,7 +7,6 @@ class Card extends Component {
     const {
       title,
       photo,
-      instructions,
       cardClick } = this.props;
 
     return (

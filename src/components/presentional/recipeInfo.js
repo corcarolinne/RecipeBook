@@ -7,6 +7,15 @@ import IconAndInput from './iconAndInput';
 
 
 class RecipeInfo extends Component {
+
+  buildIngredientRow() {
+  return this.props.ingredients && this.props.ingredients.map(item => (
+    <IngredientRow
+      ingredient= {item}
+    />
+  ));
+}
+
   render() {
     const {
       isOpen,
@@ -17,7 +26,13 @@ class RecipeInfo extends Component {
       exitButtonLabel,
       editButtonLabel,
       deleteButtonLabel,
-      closeModal} = this.props;
+      closeModal,
+      ingredients,
+      prep,
+      price,
+      serves,
+      type
+    } = this.props;
 
     return (
       <ReactModal
@@ -29,30 +44,17 @@ class RecipeInfo extends Component {
           <div className="Div-photo-icons">
             <img className="Photo" src={photo} height="300" width="300"/>
             <Grid className="Grid-recipe-info">
-              <IconAndInput icon="timer" title="Prep:" input="40min"/>
-              <IconAndInput icon="attach_money" title="Price:" input="US$ 20"/>
-              <IconAndInput icon="room_service" title="Serves:" input="8 portions"/>
-              <IconAndInput icon="local_dining" input="Vegan"/>
-
+              <IconAndInput icon="timer" title="Prep:" input={this.props.prep}/>
+              <IconAndInput icon="attach_money" title="Price:" input={this.props.price}/>
+              <IconAndInput icon="room_service" title="Serves:" input={this.props.serves}/>
+              <IconAndInput icon="local_dining" input={this.props.type}/>
             </Grid>
           </div>
           <div className="Div-title-text">
             <div className="Title"> <i>{title}</i> </div>
             <div className="Div-list-intructions">
               <List>
-                <IngredientRow ingredient="1/2 of one Trader Joe’s garlic-herb pizza crust"/>
-                <IngredientRow ingredient="1/2 of one Trader Joe’s garlic-herb pizza crust"/>
-                <IngredientRow ingredient="1/2 of one Trader Joe’s garlic-herb pizza crust"/>
-                <IngredientRow ingredient="1/2 of one Trader Joe’s garlic-herb pizza crust"/>
-                <IngredientRow ingredient="1/2 of one Trader Joe’s garlic-herb pizza crust"/>
-                <IngredientRow ingredient="1/2 of one Trader Joe’s garlic-herb pizza crust"/>
-                <IngredientRow ingredient="1/2 of one Trader Joe’s garlic-herb pizza crust"/>
-                <IngredientRow ingredient="1/2 of one Trader Joe’s garlic-herb pizza crust"/>
-                <IngredientRow ingredient="1/2 of one Trader Joe’s garlic-herb pizza crust"/>
-                <IngredientRow ingredient="1/2 of one Trader Joe’s garlic-herb pizza crust"/>
-                <IngredientRow ingredient="1/2 of one Trader Joe’s garlic-herb pizza crust"/>
-                <IngredientRow ingredient="1/2 of one Trader Joe’s garlic-herb pizza crust"/>
-
+                {this.buildIngredientRow()}
               </List>
               <div className="Instructions">
                 <div className= "Instructions-title">Instructions</div>
