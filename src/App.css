@@ -151,6 +151,17 @@
   justify-content: center;
   font-size: 3.5em;
   margin: 30px;
+  font-style: italic;
+}
+
+.Div-recipe-info .Div-title-text .Title >input {
+  display: flex;
+  justify-content: center;
+  font-size: 56px;
+  margin: 30px;
+  font-style: italic;
+  font-family: 'Lora', serif;
+  width: 100%;
 }
 
 .Div-recipe-info .Div-title-text .Div-list-intructions {
@@ -198,6 +209,16 @@
   font-size: 17px;
   padding-bottom: 25px;
 
+}
+
+.Div-recipe-info .Div-title-text .Div-list-intructions .Instructions > textarea {
+  flex-direction: column;
+  display: flex;
+  width: 500px;
+  height: 500px;
+  text-align: justify;
+  font-family: 'Lora', serif;
+  font-size: 16px;
 }
 
 .Div-recipe-info .Div-title-text .Buttons {

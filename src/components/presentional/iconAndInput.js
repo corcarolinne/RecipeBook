@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 
-
-
 class IconAndInput extends Component {
   render() {
     const { icon, title, input } = this.props;

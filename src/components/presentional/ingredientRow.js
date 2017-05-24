@@ -5,12 +5,17 @@ class IngredientRow extends Component {
   render() {
     const {
       ingredient,
+      isEditing
     } = this.props;
 
     return (
       <div className="Ingredient-row">
         <i className="material-icons">chevron_right</i>
-        {ingredient}
+        {
+          isEditing ?
+            <input /> : 
+            ingredient
+        }
       </div>
     );
   }
