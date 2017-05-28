@@ -32,12 +32,20 @@ class RecipeInfo extends Component {
   });
 
   buildIngredientRow() {
-    return this.props.ingredients && this.props.ingredients.map(item => (
+    return this.state.ingredients && this.state.ingredients.map((item, index) => (
       <IngredientRow
         ingredient= {item}
         isEditing={this.state.isEditing}
+        onChange={(event) => this.changeIngredientValue(event.target.value, index)}
       />
     ));
+  }
+
+  changeIngredientValue = (value, index) => {
+    this.state.ingredients[index] = value;
+    this.setState({
+      ingredients: this.state.ingredients
+    })
   }
 
   changeInstructionsValue = (event) => {
