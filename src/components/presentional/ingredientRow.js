@@ -13,7 +13,7 @@ class IngredientRow extends Component {
         <i className="material-icons">chevron_right</i>
         {
           isEditing ?
-            <input /> : 
+            <input value={ingredient}/> : 
             ingredient
         }
       </div>

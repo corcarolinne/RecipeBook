@@ -113,7 +113,8 @@
 
 .Div-recipe-info .Div-photo-icons .Photo {
   display: flex;
-  border-radius: 50%;
+  width: 400px;
+  height: 300px;
 }
 
 .Grid.Grid-recipe-info {
@@ -127,7 +128,7 @@
   align-items: center;
 }
 
-.iconAndInput {
+.iconAndLabel-Input {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -135,9 +136,14 @@
   font-family: 'Lora', serif
 }
 
-.iconAndInput .material-icons {
+.iconAndLabel-Input .material-icons {
   display: flex;
   margin-right: 5px;
+}
+
+.iconAndLabel-Input .input {
+  display: flex;
+  width: 50px;
 }
 
 .Div-recipe-info .Div-title-text {

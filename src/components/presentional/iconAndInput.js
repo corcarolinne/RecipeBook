@@ -2,11 +2,12 @@ import React, { Component } from 'react';
 
 class IconAndInput extends Component {
   render() {
-    const { icon, title, input } = this.props;
+    const { icon, title, value, onChange} = this.props;
     return (
-      <div className="iconAndInput">
+      <div className="iconAndLabel-Input">
         <i className="material-icons">{icon}</i>
-        <div>{title} {input}</div>
+        {title}
+        <input type="text" className="input" value={value} onChange={onChange}/>
       </div>
     );
   }
