@@ -27,9 +27,37 @@ class RecipeInfo extends Component {
     isEditing: true
   });
 
-  disableEditMode = () => this.setState({
-    isEditing: false
-  });
+  disableEditMode = () => {
+    const { onSave } = this.props;
+
+    const {
+      id,
+      title,
+      photo,
+      instructions,
+      ingredients,
+      prep,
+      price,
+      serves,
+      type
+    } = this.state;
+
+    const recipe = {
+      id,
+      title,
+      photo,
+      instructions,
+      ingredients,
+      prep,
+      price,
+      serves,
+      type
+    };
+    this.setState({
+      isEditing: false
+    });
+    onSave(recipe);
+  }
 
   buildIngredientRow() {
     return this.state.ingredients && this.state.ingredients.map((item, index) => (

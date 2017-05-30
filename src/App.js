@@ -10,10 +10,12 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
+      isEditing: false,
       recipeInfoOpen: false,
       selectedRecipe: {},
       recipeData: [
         {
+          id: 1,
           title: "Banana Bread",
           photo: "http://images.media-allrecipes.com/userphotos/560x315/713311.jpg",
           ingredients: ["2 cups all-purpose flour", "1 teaspoon baking soda", "1/4 teaspoon salt", "1/2 cup butter", "3/4 cup brown sugar", "2 eggs, beaten", "2 1/3 cups mashed overripe bananas"],
@@ -24,6 +26,7 @@ class App extends Component {
           type: "Vegetarian"
         },
         {
+          id: 2,
           title: "Macaronni & Cheese",
           photo: "http://images.media-allrecipes.com/userphotos/560x315/4448867.jpg",
           ingredients: ["1 (8 ounce) package elbow macaroni", "2/3 cup rice bran oil, divided", "2 cups unsweetened soy milk", "1 cup nutritional yeast", "4 cloves garlic, minced", "2 teaspoons yellow mustard", "1 teaspoon ground paprika"],
@@ -34,6 +37,7 @@ class App extends Component {
           type: "Vegan"
         },
         {
+          id: 3,
           title: "Honey-Garlic Chicken Thighs",
           ingredients: ["4 skinless, boneless chicken thighs", "1/2 cup soy sauce", "1/2 cup ketchup", "1/3 cup honey", "3 cloves garlic, minced", "1 teaspoon dried basil"],
           photo: "http://images.media-allrecipes.com/userphotos/560x315/1411947.jpg",
@@ -61,6 +65,41 @@ class App extends Component {
     ));
   }
 
+    saveRecipe = (recipe) => {
+      for (let i = 0; i < this.state.recipeData.length; i++) {
+        if(this.state.recipeData[i].id === recipe.id) {
+          this.state.recipeData[i] = recipe;
+        }
+      }
+
+      this.setState({
+        recipeData: this.state.recipeData,
+        selectedRecipe: recipe,
+        isEditing: false
+      });
+    }
+
+    addRecipe = () => {
+      const newRecipe = {
+        id: this.state.recipeData.length + 1,
+        title: "",
+        ingredients: [],
+        photo: "http://www.receitasanamaria.net/wp-content/uploads/2016/02/Receita-Lasanha-de-Frango-Simples-e-F%C3%A1cil.jpg",
+        instructions: "",
+        prep: "",
+        price: "",
+        serves: "",
+        type: ""
+      };
+      this.state.recipeData.push(newRecipe);
+      this.setState({
+        recipeData: this.state.recipeData,
+        selectedRecipe: newRecipe,
+        isEditing: true,
+        recipeInfoOpen: true
+      });
+    };
+
   render() {
     return (
       <div className="App">
@@ -68,9 +107,10 @@ class App extends Component {
           <img src={logoRecipeBook} className="App-logo" alt="logo of a pink donut spinning" />
           <h2 className="App-title">Recipe Book</h2>
         </div>
-        <div className="Register-button">Register your Recipe!</div>
+        <div className="Register-button" onClick={this.addRecipe}>Register your Recipe!</div>
         <i className="material-icons">add_circle</i>
         <RecipeInfo
+          id= {this.state.selectedRecipe.id}
           title= {this.state.selectedRecipe.title}
           photo= {this.state.selectedRecipe.photo}
           ingredients= {this.state.selectedRecipe.ingredients}
@@ -80,6 +120,7 @@ class App extends Component {
           serves= {this.state.selectedRecipe.serves}
           type= {this.state.selectedRecipe.type}
           isOpen={this.state.recipeInfoOpen}
+          onSave={ this.saveRecipe}
           closeModal={ () => {
             this.state.recipeInfoOpen = false;
             this.setState(this.state);
@@ -87,6 +128,7 @@ class App extends Component {
           exitButtonLabel="Exit"
           editButtonLabel="Edit"
           deleteButtonLabel="Delete"
+          isEditing={this.state.isEditing}
         />
         <Grid>
           {this.buildCards()}
